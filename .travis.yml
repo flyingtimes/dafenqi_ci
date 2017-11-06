@@ -8,5 +8,8 @@ before_install:
   - chmod 600 ~/.ssh/id_rsa
   - echo -e "Host drawer.3dmodel.cc\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
-  - ssh ubuntu@drawer.3dmodel.cc 'mkdir test && ls '  
+  - npm prune --production  # 删除devDependencies
+  - tar -jcf all.tar.bz2 *
+  - scp all.tar.bz2 ubuntu@drawer.3dmodel.cc
+  - ssh ubuntu@drawer.3dmodel.cc 'mkdir -p test && tar -jxf all.tar.bz2 -C test && rm all.tar.bz2'
 
