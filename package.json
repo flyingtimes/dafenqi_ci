@@ -1,0 +1,24 @@
+{
+  "name": test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A message server with SSL using Express",
+  "main": "test.js",
+  "scripts": {
+    "start": "node messageServer.js",
+    "dev": "node messageServer.js"
+  },
+  "dependencies": {
+    "express": "4.12.3",
+    "ws":"",
+    "mongoose":"",
+    "amqplib":"",
+    "multer":""
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": "6.x"
+  }
+}
