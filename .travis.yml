@@ -8,5 +8,5 @@ before_install:
   - chmod 600 ~/.ssh/id_rsa
   - echo -e "Host drawer.3dmodel.cc\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
-  - ssh ubuntu@drawer.3dmodel.cc 'mkdir test'  
+  - ssh ubuntu@drawer.3dmodel.cc 'mkdir test && ls '  
 
